@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Molitalia -Recetario</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/recetario.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+
+            </a>
+            <!-- ***** Logo End ***** -->
+
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="index.html">Inicio</a></li>
+              <li class="scroll-to-section"><a href="nosotros.html">Nosotros</a></li>
+              <li class="scroll-to-section"><a href="tienda.html">Tienda</a></li>
+              <li class="scroll-to-section"><a href="productos.html">Productos</a></li>
+              <li class="scroll-to-section"><a href="recetario.html" class="active">Recetario</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner" id="top">
+    <div class="header-text"></div>
+  </div>
+
+  <section class="seleccion-recetas">
+    <img class="santa-claus">
+    <h2>Selecciona una de nuestras recetas para ti 😊</h2>
+    <section class="recetas">
+      <article class="receta-miniatura1" onclick="mostrarReceta('Galletas Navideñas de Mantequilla')">
+        <p>Galletas Navideñas de Mantequilla</p>
+      </article>
+      <article class="receta-miniatura2" onclick="mostrarReceta('Trufas de Chocolate Navideñas')">
+        <p>Trufas de Chocolate Navideñas</p>
+      </article>
+      <article class="receta-miniatura3" onclick="mostrarReceta('Panettone Casero')">
+        <p>Panettone Casero</p>
+      </article>
+      <article class="receta-miniatura4" onclick="mostrarReceta('Rollo de Chocolate con Crema de Avellanas')">
+        <p>Rollo de Chocolate y Avellanas</p>
+      </article>
+    </section>
+  </section>
+
+  <aside id="receta-seleccionada" class="ocultar">
+    <h2 id="titulo-receta">Título de la receta seleccionada</h2>
+    <section class="receta-encabezado">
+      <img id="imagen-receta" src="" alt="Imagen de la receta" class="imagen-receta">
+      <aside>
+        <article>
+          <p>Dificultad</p>
+          <i class="fa-solid fa-kitchen-set"></i>
+          <span id="dificultad">Dificultad</span>
+        </article>
+        <article>
+          <p>Porciones</p>
+          <i class="fa-solid fa-utensils"></i>
+          <span id="porciones">Porciones</span>
+        </article>
+        <article>
+          <p>Tiempo</p>
+          <i class="fa-solid fa-clock"></i>
+          <span id="duracion">Duración</span>
+        </article>
+      </aside>
+    </section>
+    <section class="receta-cuerpo">
+      <aside id="ingredientes">
+        <h3>Ingredientes</h3>
+        <ul id="lista-ingredientes">
+        </ul>
+        <a class="btn-tienda" href="tienda.html">Ir a la tienda</a>
+      </aside>
+      <section class="receta-cuerpo2">
+        <aside id="preparacion">
+          <h3>Preparación</h3>
+          <section class="pasos">
+            <button onclick="mostrarPaso(1)">1</button>
+            <button onclick="mostrarPaso(2)">2</button>
+            <button onclick="mostrarPaso(3)">3</button>
+            <button onclick="mostrarPaso(4)">4</button>
+            <button onclick="mostrarPaso(5)">5</button>
+          </section>
+          <article class="paso-seleccionado" id="paso-seleccionado">
+            <p>Selecciona un paso 😊</p>
+          </article>
+        </aside>
+
+        <section class="calificacion">
+          <h3>Califica esta receta</h3>
+          <aside class="corazones">
+            <span class="corazon" data-corazon="1">❤</span>
+            <span class="corazon" data-corazon="2">❤</span>
+            <span class="corazon" data-corazon="3">❤</span>
+            <span class="corazon" data-corazon="4">❤</span>
+            <span class="corazon" data-corazon="5">❤</span>
+          </aside>
+        </section>
+      </section>
+    </section>
+  </aside>
+
+  <hr>
+
+  <div class="section events" id="events">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Calendario</h6>
+            <h2>Clases de Cocina en Zoom</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-01-recetario.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Repostería</span>
+                    <h4>Galletas decorativas</h4>
+                  </li>
+                  <li>
+                    <span>Fecha:</span>
+                    <h6>15 Dic 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duración:</span>
+                    <h6>2 Horas</h6>
+                  </li>
+                  <li>
+                    <span>Precio:</span>
+                    <h6>Gratis</h6>
+                  </li>
+                </ul>
+                <a onclick="openModal()"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-02-recetario.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Postres</span>
+                    <h4>Masa para tartas</h4>
+                  </li>
+                  <li>
+                    <span>Fecha:</span>
+                    <h6>18 Dic 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duración:</span>
+                    <h6>3 Horas</h6>
+                  </li>
+                  <li>
+                    <span>Precio:</span>
+                    <h6>Gratis</h6>
+                  </li>
+                </ul>
+                <a onclick="openModal()"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="assets/images/event-03-recetario.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Para toda la familia</span>
+                    <h4>Decorando una casita de jengibre</h4>
+                  </li>
+                  <li>
+                    <span>Fecha:</span>
+                    <h6>20 Dic 2024</h6>
+                  </li>
+                  <li>
+                    <span>Duración:</span>
+                    <h6>1.5 Horas</h6>
+                  </li>
+                  <li>
+                    <span>Precio:</span>
+                    <h6>Gratis</h6>
+                  </li>
+                </ul>
+                <a onclick="openModal()"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="contact-us section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6  align-self-center">
+              <div class="section-heading">
+                <h6>Eventos para ti</h6>
+                <h2>¡Descuento en tu próxima compra!</h2>
+                <p>Gracias por hacernos parte de tu familia cada día. Este regalo es de nosotros para ti. Participa de nuestros eventos en vivo por Zoom y obtén un descuento especial en tu siguiente compra. Llena tus datos para participar.</p>
+                <div class="special-offer">
+                  <span class="offer">off<br><em>10%</em></span>
+                  <h6>Válido hasta: <em>31 DICIEMBRE 2024</em></h6>
+                  <h4>Regalo Especial <em>10%</em> OFF!</h4>
+                  <a href="#"><i class="fa fa-angle-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="contact-us-content">
+                <form id="contact-form" action="" method="post">
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="name" name="name" id="name" placeholder="Tu Nombre..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="phone" id="phone" placeholder="Tu Teléfono" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Tu Correo Electrónico..."
+                          required="">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="orange-button">Inscribirse</button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <section class="footer-column">
+      <section class="img-footer"></section>
+    </section>
+
+    <section class="footer-column">
+      <h4>Categorías</h4>
+      <ul>
+        <li><a href="#">Alimentos</a></li>
+        <li><a href="#">Confites</a></li>
+        <li><a href="#">Perros</a></li>
+        <li><a href="#">Panetones y postres</a></li>
+        <li><a href="#">Venta Interna</a></li>
+        <li><a href="#">Línea étnica</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-column">
+      <h4>Marcas</h4>
+      <ul>
+        <li><a href="#">Molitalia</a></li>
+        <li><a href="#">Pomarola</a></li>
+        <li><a href="#">3 Ositos</a></li>
+        <li><a href="#">Fanny</a></li>
+        <li><a href="#">Costa</a></li>
+        <li><a href="#">Ambrosoli</a></li>
+        <li><a href="#">Todinno</a></li>
+        <li><a href="#">Mimaskot</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-column">
+      <h4>Contacto</h4>
+      <p>clientes@molitalia.com.pe</p>
+      <p>Tel: 0 800 18420</p>
+      <ul>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Política de Cookies</a></li>
+      </ul>
+    </section>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/js/recetario.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

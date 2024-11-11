@@ -1979,7 +1979,16 @@ body {
     padding: 30px;
   }
   footer {
-    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
   }
 }
 

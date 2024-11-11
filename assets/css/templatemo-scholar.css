@@ -707,8 +707,16 @@ Banner Style
   background-image: url(../images/banner-item-01.jpg);
 }
 
+.custom-page .item-1 {
+  background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/hd/aef08026203885.563530f80eb10.jpg'); /* Reemplaza con la ruta de la nueva imagen */
+}
+
 .main-banner .item-2 {
   background-image: url(../images/banner-item-02.jpg);
+}
+
+.custom-page .item-2 {
+  background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/8884b526203885.563530e66991e.jpg'); /* Reemplaza con la ruta de la nueva imagen */
 }
 
 .main-banner .item-3 {
@@ -878,10 +886,10 @@ Services Style
 
 .services .service-item .main-content {
   border-radius: 25px;
-  padding: 80px 30px 50px 30px;
+  padding: 80px 25px 50px 25px;
   background-color: #f1f0fe;
   margin-bottom: 30px;
-  margin-right: 80px;
+  margin-right: 50px;
   transition: all .4s;
 }
 

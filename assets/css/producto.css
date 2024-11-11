@@ -1,0 +1,81 @@
+.filter-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.filter-container button:hover {
+  background-color: #0062cc;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.product-card .discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #28a745;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.product-card .card-title {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.product-card .price {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+.product-card .favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.product-card .favorite-icon:hover {
+  color: #ff6666;
+}
+.product-banana {
+  background-image: url('https://example.com/images/banana.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.product-cookies {
+  background-image: url('https://example.com/images/cookies.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.product-cucumber {
+  background-image: url('https://example.com/images/cucumber.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.product-milk {
+  background-image: url('https://example.com/images/milk.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
